@@ -1,0 +1,10 @@
+.custom-header {
+  background-color: "black";
+  padding: "10px";
+  display: "flex";
+  justify-content: "space-between";
+}
+
+.custom-font {
+  font-family: sans-serif;
+}

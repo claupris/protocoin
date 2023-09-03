@@ -1,0 +1,73 @@
+.custom-input-container {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: black;
+  color: #f4900c;
+  padding: 10px;
+}
+
+.custom-input {
+  width: 370px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 15px 15px;
+  color: white;
+}
+
+.custom-input-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.input-logo {
+  position: auto;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 400px;
+  height: auto;
+}
+
+.custon-cadastrar {
+  font-size: 15px;
+}
+
+.custon-cadastrar a {
+  color: #f4900c;
+}
+
+.error-message {
+  font-size: 10px;
+  color: red;
+}
+
+.a-style {
+  text-decoration: none;
+}
+
+.logo-white {
+  position: auto;
+  top: 50%;
+  margin-top: 25%;
+  margin-left: 110%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 400px;
+  height: auto;
+}
+
+.custom-dash {
+  background: black;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+}

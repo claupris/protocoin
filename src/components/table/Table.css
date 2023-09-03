@@ -1,0 +1,22 @@
+.custom-table {
+  width: 96%;
+  background-color: #131313;
+  border-collapse: collapse;
+}
+
+.custom-table td {
+  border-top: 1px solid #404040;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+
+.custom-table td:last-child::after {
+  content: "";
+  display: block;
+  width: calc(100% - 20px); /* Considerando o padding da célula */
+  border-top: 1px solid white;
+  position: absolute;
+  bottom: -1px;
+  left: 10px; /* Ajuste para coincidir com o padding da célula */
+}

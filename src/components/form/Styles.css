@@ -1,0 +1,45 @@
+.centered-box {
+  position: sticky;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.custom-input-container {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.custom-input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.custom-input-icon {
+  padding-left: 10px;
+}
+
+.custom-button {
+  color: black;
+  display: flex;
+  border: #f4900c;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4900c;
+  cursor: pointer;
+}
+
+.custom-button-text {
+  font: optional;
+  font-size: 15px;
+}
