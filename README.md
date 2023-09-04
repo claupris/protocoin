@@ -17,7 +17,7 @@
 
 ## Como rodar:
 
-- Dentro do diretório do projeto:
+### Dentro do diretório do projeto:
 
 - `npm install`
 
