@@ -1,6 +1,7 @@
 import Logo from "./../../public/Group1444.png";
 import { Controller } from "../../controller/Controller";
 import { FaWallet, FaArrowDown, FaBitcoin } from "react-icons/fa";
+import "./Header.css";
 
 const Header = () => {
   const user = Controller.getUser();
@@ -25,16 +26,13 @@ const Header = () => {
           <li style={{ display: "inline", margin: "0 20px" }}>
             <a
               href="/dashboard"
-              style={{ textDecoration: "none", color: "#f4900c", fontSize: "19px" }}
+              style={{ textDecoration: "none", color: "white", fontSize: "19px" }}
             >
               <FaBitcoin /> Dashboard
             </a>
           </li>
           <li style={{ display: "inline", margin: "0 20px" }}>
-            <a
-              href="/wallet"
-              style={{ textDecoration: "none", color: "#f4900c", fontSize: "19px" }}
-            >
+            <a href="/wallet" style={{ textDecoration: "none", color: "white", fontSize: "19px" }}>
               <FaWallet /> Carteira
             </a>
           </li>
@@ -42,7 +40,7 @@ const Header = () => {
             <a
               title="Sair"
               href="/"
-              style={{ textDecoration: "none", color: "#f4900c", fontSize: "19px" }}
+              style={{ textDecoration: "none", color: "white", fontSize: "19px" }}
               onClick={Controller.logout}
             >
               {user.firstName} <FaArrowDown />

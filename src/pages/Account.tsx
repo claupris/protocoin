@@ -23,7 +23,8 @@ export const USERNAME_REGEX = /^[a-zA-Z0-9_.-]*$/;
 
 export function Account() {
   let navigate = useNavigate();
-  const handleAccount = async (
+
+  const handleAccount = (
     firstName: string,
     lastName: string,
     email: string,
@@ -41,7 +42,7 @@ export function Account() {
 
     const resp = Controller.cadastrar(User);
     if (resp === true) {
-      console.log("usuário cadastrado!");
+      alert("usuário cadastrado!");
       navigate("/");
     } else {
       alert(resp);
@@ -180,7 +181,6 @@ export function Account() {
             <Button width="405px" marginLeft="47px">
               CADASTRAR
             </Button>
-
             <span className="custon-cadastrar">
               Já possui conta?
               <a href="/"> Entrar</a>

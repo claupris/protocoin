@@ -8,3 +8,9 @@
 .custom-font {
   font-family: sans-serif;
 }
+
+li:hover,
+.active {
+  background-color: #f4900c;
+  border-radius: 5px;
+}

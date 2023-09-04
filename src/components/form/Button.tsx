@@ -8,6 +8,7 @@ interface CenteredButtonProps {
   borderRadius?: string;
   marginLeft?: string;
   children?: React.ReactNode;
+  onChange?: React.ReactNode | void;
   onClick?: () => void;
 }
 
@@ -16,7 +17,8 @@ const Button: React.FC<CenteredButtonProps> = ({
   height = "50px",
   borderRadius = "5px",
   marginLeft = "50px",
-  onClick = "toast",
+  onClick,
+  onChange,
   children,
 }) => {
   const ButtonStyle: React.CSSProperties = {

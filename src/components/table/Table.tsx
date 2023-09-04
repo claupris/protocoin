@@ -2,6 +2,8 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import axios from "axios";
 import { MinusCircle, PlusCircle } from "phosphor-react";
 import { FaArrowCircleDown, FaMinusCircle, FaPlusCircle, FaRegMoneyBillAlt } from "react-icons/fa";
+import { HiOutlineWallet, HiWallet } from "react-icons/hi2";
+import { MdMonetizationOn } from "react-icons/md";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import Button from "../form/Button";
 
@@ -148,23 +150,34 @@ const TableDash: React.FC = () => {
             textAlign: "justify",
           }}
         >
-          <button
-            style={{ backgroundColor: "#404040", borderRadius: "5px", borderColor: "#404040" }}
+          <a
+            style={{
+              backgroundColor: "#404040",
+              borderRadius: "5px",
+              borderColor: "#404040",
+              cursor: "pointer",
+            }}
             onClick={handleDecreaseMaxSetSize}
             title="Decrementar"
           >
-            <FaMinusCircle style={{ color: "black" }} />
-          </button>{" "}
+            <FaMinusCircle style={{ color: "white", fontSize: "20px" }} />
+          </a>{" "}
           <span>
             Itens Listados: <b>{maxTableSize}</b>
           </span>{" "}
-          <button
-            style={{ backgroundColor: "#404040", borderRadius: "5px", borderColor: "#404040" }}
+          <a
+            style={{
+              backgroundColor: "#404040",
+              borderRadius: "5px",
+              borderColor: "#404040",
+              cursor: "pointer",
+            }}
             onClick={handleIncreaseMaxSetSize}
             title="incrementar"
           >
-            <FaPlusCircle style={{ color: "black" }} />
-          </button>
+            {" "}
+            <FaPlusCircle style={{ color: "white", fontSize: "20px" }} />
+          </a>
         </div>
       </div>
       <div>
@@ -222,7 +235,7 @@ const TableDash: React.FC = () => {
             <TableCell sx={{ color: "white" }}>
               <b style={{ fontSize: "30px", fontFamily: "arial" }}>
                 <a>
-                  <FaRegMoneyBillAlt />
+                  <MdMonetizationOn />
                 </a>
               </b>
             </TableCell>
@@ -230,7 +243,7 @@ const TableDash: React.FC = () => {
         </TableHead>
         <TableBody>
           {data.map((item, idx: number) => (
-            <TableRow key={item.id} style={{ alignItems: "center" }}>
+            <TableRow key={idx} style={{ alignItems: "center" }}>
               <TableCell className="p-4 text-center" sx={{ color: "white" }}>
                 {idx}
               </TableCell>
@@ -252,12 +265,12 @@ const TableDash: React.FC = () => {
                   <span
                     style={{
                       color: "#f4900c",
-                      fontSize: "15px",
+                      fontSize: "20px",
                       fontFamily: "arial",
                       margin: "5px",
                     }}
                   >
-                    <FaArrowCircleDown /> Comprar
+                    <HiOutlineWallet /> Comprar
                   </span>
                 </button>
               </TableCell>

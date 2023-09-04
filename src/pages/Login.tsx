@@ -7,9 +7,8 @@ import Button from "../components/form/Button";
 import "./Styles.css";
 import { Controller } from "../controller/Controller";
 import { USERNAME_REGEX } from "./Account";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Alert } from "@mui/material";
+import { Alert, AlertTitle } from "@mui/material";
 
 interface LoginFormProps {
   onSubmit: (username: string, password: string) => void;
@@ -17,21 +16,18 @@ interface LoginFormProps {
 
 export function Login() {
   let navigate = useNavigate();
-  let notify = () => {};
+
+  let isFailed = true;
+
   const handleLogin = (username: string, password: string) => {
     if (username && password) {
       const response = Controller.login(username, password);
       if (response) {
         navigate("/dashboard");
-        {
-          <Alert severity="success">usuário autenticado!</Alert>;
-        }
-        console.log("usuário autenticado!");
-
+        isFailed = false;
         return response;
       } else {
-        notify = () => toast("usuário ou senha incorretos!");
-        console.log("usuário ou senha incorretos!");
+        return false;
       }
     }
   };
@@ -44,6 +40,7 @@ export function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [usernameError, setUsernameError] = useState("");
+    const [falha, setfalha] = useState("");
 
     const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setUsername(event.target.value);
@@ -62,6 +59,7 @@ export function Login() {
     };
 
     const handleSubmit = (event: React.FormEvent) => {
+      if (isFailed) setfalha("Usuário ou senha incorretos,");
       event.preventDefault();
       onSubmit(username, password);
     };
@@ -99,12 +97,18 @@ export function Login() {
             />
             <br />
             <br />
-            <a href="" className="a-style" onClick={notify}>
+            <a href="" className="a-style">
               <Button width="405px" marginLeft="47px">
                 LOGIN
               </Button>
             </a>
-            <ToastContainer />
+            <br />
+            {falha && (
+              <Alert severity="error">
+                <AlertTitle>Erro</AlertTitle>
+                {falha} <strong>tente novamente!</strong>
+              </Alert>
+            )}
             <br />
             <span className="custon-cadastrar">
               Ainda não tem conta?

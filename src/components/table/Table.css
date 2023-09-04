@@ -20,3 +20,7 @@
   bottom: -1px;
   left: 10px; /* Ajuste para coincidir com o padding da célula */
 }
+button:hover,
+.active {
+  background-color: white;
+}

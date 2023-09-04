@@ -71,3 +71,12 @@
   width: 100vw;
   color: black;
 }
+
+.custom-wallet {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/public/wallet.jpeg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+}

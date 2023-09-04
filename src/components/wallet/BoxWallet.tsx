@@ -1,33 +1,43 @@
-import React from "react";
-import "./Styles.css";
+import "./../form/Styles.css";
 
 interface CenteredBoxProps {
   width?: string;
   height?: string;
   marginLeft?: string;
   marginRight?: string;
-  borderRadius?: string;
   backgroundColor?: string;
+  border?: string;
+  float?: string;
+  borderRadius?: string;
+  borderColor?: string;
+  opacity?: number;
   marginTop?: string;
   children?: React.ReactNode;
 }
 
-const Box: React.FC<CenteredBoxProps> = ({
+const BoxWallet: React.FC<CenteredBoxProps> = ({
   width = "200px",
   height = "200px",
-  marginLeft = "auto",
+  marginLeft = "0px",
   marginRight = "auto",
+  backgroundColor = "white",
+  border = "10px",
+  float = "left",
   borderRadius = "10px",
-  backgroundColor = "black",
-  marginTop = "0px",
+  borderColor = "#404040",
+  opacity = 1,
+  marginTop = "80px",
   children,
 }) => {
   const boxStyle: React.CSSProperties = {
     width,
     height,
     marginLeft,
-    borderRadius,
     backgroundColor,
+    border,
+    borderRadius,
+    borderColor,
+    opacity,
     marginRight,
     marginTop,
   };
@@ -38,5 +48,4 @@ const Box: React.FC<CenteredBoxProps> = ({
     </div>
   );
 };
-
-export default Box;
+export default BoxWallet;
