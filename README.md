@@ -19,6 +19,6 @@
 
 - Dentro do diretório do projeto:
 
-### `npm install`
+- `npm install`
 
-### `npm start`
+- `npm start`
