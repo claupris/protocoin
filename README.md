@@ -8,17 +8,17 @@
 - [x] **Listagem e busca de criptomoedas**: utilização dos dados disponibilizados pela API da binance [https://api.binance.com/api/v3/ticker/24hr]
 - [ ] **Transações entre usuários**: transações de criptomoedas
 
-## Tecnologias
+### Tecnologias
 
 - React
 - TypeScript
 - Axios
 - Mui Core
 
-## Como rodar:
+### Como rodar:
 
-- Dentro do diretório do projeto:
+#### Dentro do diretório do projeto:
 
-### `npm install`
+- `npm install`
 
-### `npm start`
+- `npm start`
