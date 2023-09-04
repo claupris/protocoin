@@ -14,6 +14,7 @@
 - TypeScript
 - Axios
 - Mui Core
+- Deploy no Vercel <a target="_BLANK" href="https://protocoin.vercel.app/">aqui</a>
 
 ### Como rodar:
 
