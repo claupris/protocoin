@@ -14,7 +14,7 @@
 - TypeScript
 - Axios
 - Mui Core
-- Deploy no Vercel <a target="_BLANK" href="https://protocoin-git-master-claupris.vercel.app/">aqui</a>
+- Deploy no Vercel <a target="_BLANK" href="https://protocoin-new.vercel.app/">aqui</a>
 
 ### Como rodar:
 
