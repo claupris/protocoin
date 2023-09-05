@@ -14,15 +14,6 @@ const data = [
 ];
 
 export function Dashboard() {
-  let navigate = useNavigate();
-
-  const handleAutentication = () => {
-    const isAutenticate = Controller.autenticado();
-    if (!isAutenticate) {
-      navigate("/");
-    }
-  };
-
   const Dash: React.FC = () => {
     return (
       <div className="custom-dash">
@@ -32,6 +23,5 @@ export function Dashboard() {
     );
   };
 
-  handleAutentication();
   return <Dash></Dash>;
 }

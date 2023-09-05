@@ -42,8 +42,8 @@ export function Account() {
 
     const resp = Controller.cadastrar(User);
     if (resp === true) {
-      alert("usuário cadastrado!");
       navigate("/");
+      alert("usuário cadastrado!");
     } else {
       alert(resp);
     }

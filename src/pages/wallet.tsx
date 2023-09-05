@@ -8,15 +8,6 @@ import BoxWallet from "../components/wallet/BoxWallet";
 interface WalletProps {}
 
 export function Wallet() {
-  let navigate = useNavigate();
-
-  const handleAutentication = () => {
-    const isAutenticate = Controller.autenticado();
-    if (!isAutenticate) {
-      navigate("/");
-    }
-  };
-
   const Wallet: React.FC = () => {
     return (
       <div className="custom-dash">
@@ -32,6 +23,5 @@ export function Wallet() {
     );
   };
 
-  handleAutentication();
   return <Wallet></Wallet>;
 }
